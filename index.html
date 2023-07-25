@@ -14,7 +14,12 @@
 	<!-- Pardotで確認したFH連携用のコードをコピペ -->
 <form action="https://pdt.peaceworld.click/l/956632/2023-05-01/57t7x" method="post">
        <!-- まずは必須項目だけ連携 -->
-       <label>メールアドレス</label><input type="text" name="email"><br><br>
+       
+	<label for="name">取引先責任者名</label><input id="name" maxlength="80" name="name" size="20" type="text" /><br>
+	<label>メールアドレス</label><input type="text" name="email"><br><br>
+　　　　　　　　　　　　　　　　<label for="subject">件名</label><input id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+	<label for="description">説明</label><textarea name="description"></textarea><br>
+
 	
 	<p class="form-field  同意 pd-text required">
 	<label>同意する</label><input type="checkbox" name="同意" value="同意する" class="checkbox-privacy" /><br><br>
