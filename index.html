@@ -12,13 +12,7 @@
 <br>Happyな日々をおくろうぜい！</br>
 	
 	<!-- Pardotで確認したFH連携用のコードをコピペ -->
-<form action="https://pdt.peaceworld.click/l/956632/2023-05-01/57t7x" method="post">
-       <!-- まずは必須項目だけ連携 -->
-       
-	<label for="name">取引先責任者名</label><input id="name" maxlength="80" name="name" size="20" type="text" /><br>
-	<label>メールアドレス</label><input type="text" name="email"><br><br>
-　　　　　　　　　　　　　　　　<label for="subject">件名</label><input id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
-	<label for="description">説明</label><textarea name="description"></textarea><br>
+
 
 	
 	<!--<p class="form-field  同意 pd-text required">-->
@@ -33,9 +27,30 @@
 	<!--<input type="hidden" id="employee_val2" name="employee_val2" value="0711">-->
 	
        <!-- submitボタン -->
-       <input type="submit" name="送信">
-</form>
 
+<form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+
+<input type=hidden name="orgid" value="00D5h000004bXR6">
+<input type=hidden name="retURL" value="http://love.peaceworld.click">
+
+<!— ---------------------------------------------------------------------- -->
+<!— 注意: これらの項目は、省略可能なデバッグ用要素です。デバッグモードでテストを行う場合は、これらの行をコメント解除してください。 -->
+<!— <input type="hidden" name="debug" value=1> -->
+<!— <input type="hidden" name="debugEmail" -->
+<!-- value="ktachizaki@salesforce.com"> -->
+<!— ---------------------------------------------------------------------- -->
+
+<label for="name">取引先責任者名</label><input id="name" maxlength="80" name="name" size="20" type="text" /><br>
+
+<label for="email">メール</label><input id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="subject">件名</label><input id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+
+<label for="description">説明</label><textarea name="description"></textarea><br>
+
+<input type="submit" name="submit">
+
+</form>
 
    
 <script type='text/javascript'>
