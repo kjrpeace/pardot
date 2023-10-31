@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<!-- Google Tag Manager -->
+<!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P3LX3VFL');</script>-->
+<!-- End Google Tag Manager -->
+	    
+        <base href="" >
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Pardot Website 検証用"/>
+        <title>Pardot Website 検証</title>
+
+<script>
+    var piDomain = 'pdt.peaceworld.click'; // format of 'go.example.com'
+
+    (function() {
+        var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src='//'+piDomain+'/pdt.js';
+        var c=document.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);
+        window['pdt'] = window['pdt'] || function(){(window['pdt'].cq = window['pdt'].cq || []).push(arguments);};
+    })();
+
+    // Create an analytics tracker with the required information:
+    // pdt('create', Account Engagement account ID + 1000, Account Engagement campaign ID + 1000, 'go.example.com');
+    pdt('create', 957632, 6129, 'pdt.peaceworld.click');
+
+    pdt("set", "title", "TTK");
+	pdt(function (tracker) {
+  let url = tracker.get("https://www.loveandpeace.jp");
+});
+	pdt(function (tracker) {
+      let status = tracker.getConsentStatus();
+      let title = tracker.get("title");
+      let url = tracker.get("url");
+      let referrer = tracker.get("referrer");
+      let piEmail = tracker.get("piEmail");
+      let utmCampaign = tracker.get("utmCampaign");
+      console.log(status, title, url, referrer, piEmail, utmCampaign);
+    });
+    pdt('sendPageView');
+
+</script>
+	    
+    </head>
+    <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3LX3VFL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	    
+        Hello World
+<br>Happyな日々をおくろうぜい！</br>
+	
+	<!-- Pardotで確認したFH連携用のコードをコピペ -->
+
+
+	
+	<!--<p class="form-field  同意 pd-text required">-->
+	<!--<label>同意する</label><input type="checkbox" name="同意" value="同意する" class="checkbox-privacy" /><br><br>-->
+		<!--</p>-->
+　　　　　　　　　　　　　　　　
+	<!--<!--<p class="form-field  TTK_hidden1 pd-hidden required hidden   ">-->
+	<!--<input type="hidden" name="956632_TTK_hidden1" value="かくれんぼ" >-->
+	<!--</p>-->
+
+　　　　　　　　　　　　　　　　<!--<input type="hidden" id="employee_val" name="employee_val" value="">-->
+	<!--<input type="hidden" id="employee_val2" name="employee_val2" value="0711">-->
+	
+       <!-- submitボタン -->
+
+<form action="https://pdt.peaceworld.click/l/956632/2023-05-01/57t7x" method="POST">
+
+<input type=hidden name="orgid" value="00D5h000004bXR6">
+<input type=hidden name="retURL" value="https://love.peaceworld.click">
+
+
+<!— ---------------------------------------------------------------------- -->
+<!— 注意: これらの項目は、省略可能なデバッグ用要素です。デバッグモードでテストを行う場合は、これらの行をコメント解除してください。 -->
+<!— <input type="hidden" name="debug" value=1> -->
+<!— <input type="hidden" name="debugEmail" -->
+<!-- value="ktachizaki@salesforce.com"> -->
+<!— ---------------------------------------------------------------------- -->
+
+<label for="name">名前</label><input id="name" maxlength="80" name="name" size="20" type="text" /><br>
+
+<label for="email">メール</label><input id="email" maxlength="80" name="email" size="20" type="text" /><br>
+
+<label for="email">郵便番号</label><input id="zip" maxlength="80" name="zip" size="20" type="text" /><br>
+<label for="email">都道府県</label><input id="state" maxlength="80" name="state" size="20" type="text" /><br>
+<label for="email">住所</label><input id="address1" maxlength="80" name="address1" size="20" type="text" /><br>
+	<label for="email">その他質問なんでも</label><input id="address1" maxlength="80" name="address1" size="20" type="text" /><br>
+
+<label for="subject">件名</label><input id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+
+<label for="description">説明</label><textarea name="description"></textarea><br>
+
+<input type="submit" name="submit">
+
+</form>
+
+
+	    <a href="https://love.peaceworld.click">愛だよAI</a>
+
+	 <button type="button" id="show_banner_button" onClick="pdt('showConsentBanner')">
+        Cookie Consent Settings
+      </button>
+      <button type="button" id="cookie_clear_button" onClick="pdt('clearTrackingCookies')">
+        Cookie Clear
+      </button>
+      <button type="button" id="revokeConsent_button" onClick="pdt('revokeConsent')">
+        revokeConsent
+      </button>　　　　　　
+　　　　　　　　　　　　　　　　　　　　　　
+</body>
+</html>
