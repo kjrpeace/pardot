@@ -29,6 +29,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     pdt('create', 957632, 6129, pdt.peaceworld.click);
 
     pdt("set", "たっちー", "About Us");
+	pdt(function (tracker) {
+      let status = tracker.getConsentStatus();
+      let title = tracker.get("title");
+      let url = tracker.get("url");
+      let referrer = tracker.get("referrer");
+      let piEmail = tracker.get("piEmail");
+      let utmCampaign = tracker.get("utmCampaign");
+      console.log(status, title, url, referrer, piEmail, utmCampaign);
+    });
     pdt('sendPageView');
 
 </script>
