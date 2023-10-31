@@ -30,6 +30,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     pdt("set", "title", "TTK");
 	pdt(function (tracker) {
+  let url = tracker.get("https://www.loveandpeace.jp");
+});
+	pdt(function (tracker) {
       let status = tracker.getConsentStatus();
       let title = tracker.get("title");
       let url = tracker.get("url");
