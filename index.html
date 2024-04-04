@@ -1,70 +1,393 @@
+
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+<title>【テスト】AEフォーム</title>
+<meta name="keywords" content="【テスト】AEフォーム,HIP処理,熱処理,焼結,金属加工" />
+<meta name="description" content="【テスト】AEフォーム｜金属技研株式会社では、熱処理、HIP処理、焼結など、あらゆる分野においてトップレベルの金属加工技術および各種構造物の設計・製作技術を提供しています。" />
+
+<link rel="stylesheet" href="/dcms_media/css/reset.css" />
+ <!--↑↑↑追加-->
+<link rel="stylesheet" href="/dcms_media/css/slick.css" />
+  <link rel="stylesheet" href="/dcms_media/css/slick-theme.css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.min.css" />
+  <link rel="stylesheet" href="/dcms_media/css/lightbox.min.css" />
+  <link rel="stylesheet" href="/dcms_media/css/normalize.css" />
+  <link rel="stylesheet" href="/dcms_media/css/common.css" />
+  <link rel="stylesheet" href="/dcms_media/css/common_tablet.css" />
+  <link rel="stylesheet" href="/dcms_media/css/common_smartphone.css" />
+  <link rel="stylesheet" href="/dcms_media/css/sub.css" />
+  <link rel="stylesheet" href="/dcms_media/css/sub_tablet.css" />
+  <link rel="stylesheet" href="/dcms_media/css/sub_smartphone.css" />
+  <link rel="stylesheet" href="/dcms_media/css/utility.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/dcms_media/css/en_new.css" />
+  <link rel="stylesheet" href="/dcms_media/css/original.css" />
+  <!-- GMG-css -->
+  <link rel="stylesheet" href="/dcms_media/other/new-byf.css" />
+  <!-- [GMG-sass] -->
+  <link rel="stylesheet" href="/dcms_media/css/gmg_original.css" />
+
+  <script type="text/javascript" src="/dcms_media/js/jquery.js"></script>
+  <script type="text/javascript" src="/dcms_media/js/jquery.matchHeight-min.js"></script>
+  <script type="text/javascript" src="/dcms_media/js/jquery.biggerlink.min.js"></script>
+  <script type="text/javascript" src="/dcms_media/js/slick.js"></script>
+  <script type="text/javascript" src="/dcms_media/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="/dcms_media/js/current.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    var lh = "";
+    lh = location.href;
+    if (lh.match(/dcmsadm/)) {
+      document.write('<link rel="stylesheet" href="/dcms_media/css/management_screen.css" \/>');
+    } else {
+      document.write('<link rel="stylesheet" href="/dcms_media/css/publicside.css" \/>');
+      $(document).ready(function () {
+        $("a[href^=#]").click(function () {
+          var speed = 300; // ミリ秒
+          var href = $(this).attr("href");
+          var target = $(href == "#" || href == "" ? "html" : href);
+          var position = target.offset().top;
+          position = position - 120;
+          console.log(position);
+          $("body,html").animate({ scrollTop: position }, speed, "swing");
+          return false;
+        });
+        //matchHeight
+        $(".process_menu p").matchHeight();
+        $(".matchHeight").matchHeight();
+		  if ($(".mh").index() > -1) {
+		    $(".mh").matchHeight();
+		  }
+		  if ($(".mh2").index() > -1) {
+		    $(".mh2").matchHeight();
+		  }
+		  if ($(".mh3").index() > -1) {
+		    $(".mh3").matchHeight();
+		  }
+		  if ($(".mh4").index() > -1) {
+		    $(".mh4").matchHeight();
+		  }
+		  if ($(".mh5").index() > -1) {
+		    $(".mh5").matchHeight();
+		  }
+		  if ($(".mh6").index() > -1) {
+		    $(".mh6").matchHeight();
+		  }
+        //BiggerLink
+        $(".biggerLink").biggerlink();
+        //faq conatents
+        $(".faq_title").on("click", function () {
+          $(this).next().slideToggle();
+        });
+        //
+        //
+        $(function () {
+          var headerHight = 100;
+          $('a[href^="#"]').click(function () {
+            // console.log("sample");
+            var href = $(this).attr("href");
+            var target = $(href == "#" || href == "" ? "html" : href);
+            var position = target.offset().top - headerHight;
+            $("html, body").animate({ scrollTop: position }, 550, "swing");
+            return false;
+          });
+        });
+      });
+    }
+  </script>
+  <script type="text/javascript" src="/dcms_media/js/common.js"></script>
+<!--↓↓↓追加-->
+
+<link rel="stylesheet" href="/dcms_media/css/renewal-common.css" />
+<script type="text/javascript" src="/dcms_media/js/function.js" defer></script>
+
+<script>
+  window.WebFontConfig = {
+    google: { families: ["Noto+Sans+JP:300,400,500,600,700", "Heebo:400,700"] },
+    active: function () {
+      sessionStorage.fonts = true;
+    },
+  };
+  (function () {
+    var wf = document.createElement("script");
+    wf.src = "//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js";
+    wf.type = "text/javascript";
+    wf.async = "true";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(wf, s);
+  })();
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="/dcms_media/js/renewal-common.js"></script>
+
 <!-- Google Tag Manager -->
-<!--//<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-//new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P3LX3VFL');</script>//
+})(window,document,'script','dataLayer','GTM-TPSR5NR');</script>
 <!-- End Google Tag Manager -->
-	    
-        <base href="" >
-        <meta charset="utf-8"/>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-        <meta name="description" content="Pardot Website 検証用"/>
-        <title>Pardot Website 検証</title>
-
-
-	    
-    </head>
-    <body>
 <!-- Google Tag Manager (noscript) -->
-<!--//<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3LX3VFL"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>//
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPSR5NR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-	    
-        Hello World
-<br>Happyな日々をおくろうぜい！</br>
-	
-	<!-- Pardotで確認したFH連携用のコードをコピペ -->
+
+<!--BowNow-->
+<script>
+var _bownow_trace_id_ = "UTC_58ec9114e187a";
+var hm = document.createElement("script");
+hm.src = "https://contents.bownow.jp/js/trace.js";
+document.getElementsByTagName("head")[0].appendChild(hm);
+</script>
+
+<!-- CMP -->
+<script src="https://cmp.webtru.cloud-circus.com/v2/6c122ef6e5/cmp.js" async></script>
+
+<!-- Account Engagement -->
+<script type='text/javascript'>
+piAId = '1045683';
+piCId = '';
+piHostname = 'go.kinzoku.co.jp';
+(function() {
+    function async_load(){
+        var s = document.createElement('script'); s.type = 'text/javascript';
+        s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + piHostname + '/pd.js';
+        var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+    }
+    if(window.attachEvent) { window.attachEvent('onload', async_load); }
+    else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+</head>
+<body class="common" data-page="test" id="js-body">
+<header class="renewal-header parts-inner" id="js-renewal-header">
+      <div class="renewal-header-logo"><a class="renewal-header-logo__img" href="/" id="js-renewal-header__logo"><img src="/dcms_media/other/renewal-logo.svg" alt=""/></a><span class="renewal-header-logo__text" id="js-renewal-header__logoText">金属技研株式会社</span></div>
+      <div class="renewal-header-tool" id="js-renewal-header__con">
+        <ul class="renewal-header-tool__list" id="js-renewal-header__list"> 
+          <li><a href="/kinzoku_faq.html">よくある質問</a></li>
+          <li><a href="/recruit.html">採用情報</a></li>
+          <li><a class="-bg" href="/en.html">English</a></li>
+          <li><a class="-bg" href="/cn.html">中文</a></li>
+        </ul>
+        <ul class="renewal-header-tool__nav">
+          <li class="js-renewal-header__item"><a href="/about_mtc.html">MTCとは</a>
+            <ul class="renewal-header-tool__nav__inner js-renewal-header__item__inner">
+              <li><a href="/about_mtc/message.html">代表メッセージ</a></li>
+              <li><a href="/about_mtc/company.html">会社概要／工場紹介</a></li>
+              <li><a href="/sustainability.html">サステナビリティ</a></li>
+              <li><a href="/about_mtc/history.html">MTCの歩み</a></li>
+              <li><a href="/about_mtc/quality.html">品質管理体制</a></li>
+              <li><a href="/about_mtc/environment_ma.html">環境マネジメント</a></li>
+              <li><a href="/flow.html">お問い合わせからの流れ</a></li>
+            </ul>
+          </li>
+          <li class="js-renewal-header__item"><a href="/core_technology.html">コア技術</a>
+            <ul class="renewal-header-tool__nav__inner js-renewal-header__item__inner">
+              <li><a href="/core_technology/hip.html">HIP</a></li>
+              <li><a href="/core_technology/heat_treatment.html">熱処理</a></li>
+              <li><a href="/core_technology/sintering.html">接合(ろう付／溶接）</a></li>
+              <li><a href="/core_technology/additive_manufacturing.html">金属積層造形</a></li>
+              <li><a href="/core_technology/resin_additive_manufacturing.html">樹脂積層造形</a></li>
+              <li><a href="/core_technology/forming.html">成形／機械加工</a></li>
+              <li><a href="/core_technology/analysis.html">検査／解析・分析</a></li>
+            </ul>
+          </li>
+          <li><a href="/engineering.html">エンジニアリング</a></li>
+          <li><a href="/meb.html">電子線照射装置</a></li>
+          <li><a href="/media/">トピックス</a></li>
+          <li class="js-renewal-header__item"><a href="/case.html">導入事例</a>
+            <ul class="renewal-header-tool__nav__inner js-renewal-header__item__inner">
+              <li><a href="/case.html#link00">業界別導入事例</a></li>
+              <li><a href="/case.html#link01">HIP処理加工例</a></li>
+              <li><a href="/case.html#link02">熱処理の処理例</a></li>
+              <li><a href="/case.html#link03">ろう付加工例</a></li>
+              <li><a href="/case.html#link04">溶接加工例</a></li>
+              <li><a href="/case.html#link05">積層造形事例</a></li>
+              <li><a href="/case.html#link06">エンジニアリング事例</a></li>
+            </ul>
+          </li>
+        </ul><a class="parts-btn-line --black" href="/contacts.html">お問い合わせ</a>
+      </div>
+      <div class="renewal-header-menu" id="js-renewal-header__menu"> <span class="line"><!--line--></span><span class="line"><!--line--></span><span class="line"><!--line--></span></div>
+    </header>
+
+<ol class="renewal-pageTitle__nav__inner" id="js-renewal-pageTitle__nav__inner">
+<li class="breadcrumb_list"><a href="https://www.kinzoku.co.jp/index.html"><span>ホーム</span></a></li><li class="breadcrumb_list"><a href="https://www.kinzoku.co.jp/contacts.html"><span>お問い合わせ一覧</span></a></li><li class="breadcrumb_list"><span>【テスト】AEフォーム</span></li>
+</ol>
+<div id="wrapper">
+<div id="contentbox">
+<div id="mainbox">
 
 
-	
-	<!--<p class="form-field  同意 pd-text required">-->
-	<!--<label>同意する</label><input type="checkbox" name="同意" value="同意する" class="checkbox-privacy" /><br><br>-->
-		<!--</p>-->
-　　　　　　　　　　　　　　　　
-	<!--<!--<p class="form-field  TTK_hidden1 pd-hidden required hidden   ">-->
-	<!--<input type="hidden" name="956632_TTK_hidden1" value="かくれんぼ" >-->
-	<!--</p>-->
+<!-- ブロック貼り付けエリア -->
+<div id="dcms_layoutPageBlockPasteArea">
+<!-- ブロック -->
+<div id="dcms_layoutPageBlock">
+<section id="js-renewal-pageTitle" class="p-title-wrap">
+<div class="inner">
+<h1 class="page-title">CONTACT US</h1>
+<p class="page-sub_title">【テスト】AEフォーム</p>
+</div>
+<div id="js-renewal-pageTitle__nav" class="renewal-pageTitle__nav parts-inner">&nbsp;</div>
+</section>
+<div class="form-item">
+<p>お問い合わせいただきありがとうございます。<br /> フォームにご入力いただき、送信ボタンを押してください。</p>
+<p class="mt20">下記のような内容の相談を受け付けております。<br /> その他の内容もお気軽にご相談ください。</p>
+<p class="mt20 fz20">お電話でのご相談は下記よりお願いいたします。</p>
+<p class="mt20 form-item__tell"><span class="form-item__tell_ttl">TEL.</span> <span class="form-item__tell_num">03-5365-3035</span></p>
+<div class="mt40">&nbsp;</div>
+<div class="mt40">
+<ul class="list-decimal-leading-zero list-pl2 li-mt10 marker-color-red fz15">
+<li>.list-decimal-leading-zero</li>
+<li>.list-pl2でマーカーのはみ出しを調整。</li>
+<li>.li-mt10(liの余白調整10~30)</li>
+<li>marker-color-red"</li>
+<li>fz15(font-size)</li>
+</ul>
+</div>
+<div class="mt40">
+<ul class="list-lower-alpha list-pl2 li-mt10 marker-color-blk fz15">
+<li>.list-lower-alpha</li>
+<li>.list-pl2でマーカーのはみ出しを調整。</li>
+<li>.li-mt10(liの余白調整10~30)</li>
+<li>marker-color-blk"</li>
+<li>fz15(font-size)</li>
+</ul>
+</div>
+<div class="mt40">
+<ul class="list-upper-alpha list-pl2 li-mt10 fz15">
+<li>.list-upper-alpha</li>
+<li>.list-pl2でマーカーのはみ出しを調整。</li>
+<li>.li-mt10(liの余白調整10~30)</li>
+<li>fz15(font-size)</li>
+</ul>
+</div>
+<div class="mt40">
+<ul class="list-lower-roman list-pl2 li-mt10 fz15">
+<li>.list-lower-roman</li>
+<li>.list-pl2でマーカーのはみ出しを調整。</li>
+<li>.li-mt10(liの余白調整10~30)</li>
+<li>fz15(font-size)</li>
+</ul>
+</div>
+<div class="mt40">
+<ul class="list-none li-mt10 fz15">
+<li>.list-none</li>
+<li>.li-mt10(liの余白調整10~30)</li>
+<li>fz15(font-size)</li>
+</ul>
+</div>
+</div>
+<div class="form-item">
+<div class="form-item__con">
+<iframe src="https://go.kinzoku.co.jp/l/1044683/2024-03-04/gm868?wmode=opaque" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
+</div>
+</div>
+<section class="inner mt150 m150">
+<div class="parts-contact-banner"><!-- col st -->
+<div class="col parts-contact-banner__con-md js-div-to-link">
+<div class="parts-contact-banner-title-wrap txt_c">
+<h2 class="title-jp"><a href="/contacts/contact-plan.html">設計に関するご相談</a></h2>
+<p class="title-en">Design Consultation</p>
+</div>
+<div class="parts-contact-banner__bg js-img-to-bg"><img src="/dcms_media/image/inquery-img01.png" alt=" " /></div>
+</div>
+<!-- col end --> <!-- col st -->
+<div class="col parts-contact-banner__con-md js-div-to-link">
+<div class="parts-contact-banner-title-wrap txt_c">
+<h2 class="title-jp"><a href="/contacts/contact-estimate.html">お見積りのご相談</a></h2>
+<p class="title-en">Quote Request</p>
+</div>
+<div class="parts-contact-banner__bg js-img-to-bg"><img src="/dcms_media/image/inquery-img02.png" alt=" " /></div>
+</div>
+<!-- col end --> <!-- col st -->
+<div class="col parts-contact-banner__con-md js-div-to-link">
+<div class="parts-contact-banner-title-wrap txt_llc">
+<h2 class="title-jp"><a href="/contacts.html">その他お問い合わせ</a></h2>
+<p class="title-en">Contact Us</p>
+<p class="caption">オンライン相談承っております</p>
+</div>
+<div class="parts-contact-banner__bg js-img-to-bg"><img src="/dcms_media/image/inquery-img03.png" alt=" " /></div>
+</div>
+<!-- col end --></div>
+</section>
 
-　　　　　　　　　　　　　　　　<!--<input type="hidden" id="employee_val" name="employee_val" value="">-->
-	<!--<input type="hidden" id="employee_val2" name="employee_val2" value="0711">-->
-	
-       <!-- submitボタン -->
-
-<form action="https://pdt3.peaceworld.xyz/l/956632/2024-02-26/66rjp" method="POST">
+</div>
+<!-- // ブロック -->
+</div>
+<!-- // ブロック貼り付けエリア -->
 
 
-
-
-<!--<!— ---------------------------------------------------------------------- -->
-<!--<!— 注意: これらの項目は、省略可能なデバッグ用要素です。デバッグモードでテストを行う場合は、これらの行をコメント解除してください。 -->
-<!--<!— <input type="hidden" name="debug" value=1> -->
-<!--<!— <input type="hidden" name="debugEmail" -->
-<!-- value="ktachizaki@salesforce.com"> -->
-<!--<!— ---------------------------------------------------------------------- -->
-
-<label for="last_name">姓</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" /><br>
-
-<label for="email">メール</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-
-<input type="submit" name="submit">
-
-
-	<iframe src="https://pdt.peaceworld.click/l/956632/2024-03-27/694n3" width="100%" height="500" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
-
+</div>
+<!-- // mainbox end -->
+</div>
+</div>
+<div class="renewal-return" id="js-renewal-return"><!--return--></div>
+<footer class="renewal-footer">
+  <div class="renewal-footer-inner parts-inner--s">
+    <div class="renewal-footer-con">
+      <p class="title">金属技研株式会社</p>
+      <p class="con">熱処理、HIP処理、焼結など、あらゆる分野においてトップレベルの金属加工技術および各種構造物の設計・製作技術を提供しています。</p>
+    </div>
+    <div class="renewal-footer-list">
+      <div class="renewal-footer-list__item">
+        <a class="title" href="/about_mtc.html">MTCとは</a><a class="title" href="/about_mtc/message.html">代表メッセージ</a><a class="title" href="/about_mtc/company.html">会社概要／工場紹介</a><a class="title" href="/sustainability.html">サステナビリティ</a><a class="title" href="/about_mtc/history.html">MTCの歩み</a
+        ><a class="title" href="/about_mtc/quality.html">品質管理体制</a><a class="title" href="/about_mtc/environment_ma.html">環境マネジメント</a><a class="title" href="/flow.html">お問い合わせからの流れ</a>
+      </div>
+      <div class="renewal-footer-list__item">
+        <a class="title" href="/core_technology.html">コア技術</a>
+        <ul class="list">
+          <li><a href="/core_technology/hip.html">HIP</a></li>
+          <li><a href="/core_technology/heat_treatment.html">熱処理</a></li>
+          <li><a href="/core_technology/sintering.html">接合(ろう付／溶接）</a></li>
+          <li><a href="/core_technology/additive_manufacturing.html">金属積層造形</a></li>
+          <li><a href="/core_technology/resin_additive_manufacturing.html">樹脂積層造形</a></li>
+          <li><a href="/core_technology/forming.html">成形／機械加工</a></li>
+          <li><a href="/core_technology/analysis.html">検査／解析・分析</a></li>
+        </ul>
+      </div>
+      <div class="renewal-footer-list__item">
+        <a class="title" href="/case.html">導入事例</a>
+        <ul class="list">
+          <li><a href="/case.html#link00">業界別導入事例</a></li>
+          <li><a href="/case.html#link01">HIP処理加工例</a></li>
+          <li><a href="/case.html#link02">熱処理の処理例</a></li>
+          <li><a href="/case.html#link03">ろう付加工例</a></li>
+          <li><a href="/case.html#link04">溶接加工例</a></li>
+          <li><a href="/case.html#link05">積層造形事例</a></li>
+          <li><a href="/case.html#link06">エンジニアリング事例</a></li>
+        </ul>
+      </div>
+      <div class="renewal-footer-list__item">
+        <a class="title" href="/media/">トピックス</a><a class="title" href="/recruit.html" target="_blank" rel="noopener">採用情報</a><a class="title" href="/news_release.html">ニュースリリース</a><a class="title" href="/contacts.html">お問い合わせ</a>
+        <ul class="icon">
+          <li>
+            <a href="https://twitter.com/MetalTechJapan" target="_blank" rel="noopener"> <img src="/dcms_media/other/renewal-footer-3.svg" alt="Twitter" /></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/metal-technology-corporation-ltd.?trk=company_logo" target="_blank" rel="noopener"> <img src="/dcms_media/other/renewal-footer-2.svg" alt="lLinkedin" /></a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/channel/UCY2w1_Nj5V_8QfiMI2yvudA/featured" target="_blank" rel="noopener"> <img src="/dcms_media/other/renewal-footer-1.svg" alt="Youtube" /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="renewal-footer-tool parts-inner--s">
+    <ul class="renewal-footer-tool__list">
+      <li><a href="/privacy_policy.html">プライバシーポリシー</a></li>
+      <li><a href="/sitemap.html">サイトマップ</a></li>
+    </ul>
+    <small class="renewal-footer-tool__copy">Copyright (c) 2008 Metal Technology Co. Ltd.</small>
+  </div>
+</footer>
 
 
 
