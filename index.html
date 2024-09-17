@@ -1,107 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-<!—- Google Tag Manager -->
+    <head>
+        <base href="" >
+        <meta charset="utf-8"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="description" content="Pardot Website 検証用"/>
+        <title>Pardot Website 検証</title>
+    </head>
+    <body>
+        Hello World
 
-<!--　//<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':-->
-//new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P3LX3VFL');</script>　-->
-<!-- End Google Tag Manager -->
-
-<base href="" >
-<meta charset="utf-8"/>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<meta name="description" content="Pardot Website 検証用"/>
-<title>Pardot Website 検証</title>
-
-
-
-</head>
-<body>
-<!— Google Tag Manager (noscript) -->
-<!--//<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3LX3VFL“
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>//
-<!— End Google Tag Manager (noscript) -->
-
-Hello World
-<br>Happyな日々をおくろうぜい！</br>
-
-<!— Pardotで確認したFH連携用のコードをコピペ -->
-
-
-
-<!—<p class="form-field 同意 pd-text required">-->
-<!—<label>同意する</label><input type="checkbox" name="同意" value="同意する" class="checkbox-privacy" /><br><br>-->
-<!—</p>-->
-
-<!—<!—<p class="form-field TTK_hidden1 pd-hidden required hidden ">-->
-<!—<input type="hidden" name="956632_TTK_hidden1" value="かくれんぼ" >-->
-<!—</p>-->
-
-<!—<input type="hidden" id="employee_val" name="employee_val" value="">-->
-<!—<input type="hidden" id="employee_val2" name="employee_val2" value="0711">-->
-
-<!— submitボタン -->
-
-
+	    <form action="https://pdt.peaceworld.click/l/956632/2023-05-01/57t7x" method="post">
+       <!-- まずは必須項目だけ連携 -->
+       <label>メールアドレス</label><input type="text" name="email"><br><br>
+       <!-- submitボタン -->
+       <input type="submit" name="送信">
 </form>
-
-
-
-
-<!—<!— ---------------------------------------------------------------------- -->
-<!—<!— 注意: これらの項目は、省略可能なデバッグ用要素です。デバッグモードでテストを行う場合は、これらの行をコメント解除してください。 -->
-<!—<!— <input type="hidden" name="debug" value=1> -->
-<!—<!— <input type="hidden" name="debugEmail" -->
-<!-- value="ktachizaki@salesforce.com"> -->
-<!—<!— ---------------------------------------------------------------------- -->
-
-<form action="https://pdt.peaceworld.click/l/956632/2023-05-01/57t7x" method="post">
-<input type=hidden name="orgid" value="00D5h000004bXR6">
-<input type=hidden name="retURL" value="https://love.peaceworld.click">
-
-<!--  ----------------------------------------------------------------------  -->
-<!--  注意: これらの項目は、省略可能なデバッグ用要素です。デバッグモードでテストを行う場合は、これらの行をコメント解除してください。        -->
-<!--  <input type="hidden" name="debug" value=1>                              -->
-<!--  <input type="hidden" name="debugEmail"                                  -->
-<!--  value="ktachizaki@salesforce.com">                                      -->
-<!--  ----------------------------------------------------------------------  -->
-
-
-<label for="email">メール</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
-
-
-<label for="subject">件名</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
-
-<label for="description">説明</label><textarea name="description"></textarea><br>
-
-<label for="status">状況</label><select  id="status" name="status"><option value="">--なし--</option><option value="On Hold">On Hold</option>
-<option value="Escalated">Escalated</option>
-<option value="Closed">Closed</option>
-<option value="New">New</option>
-</select><br>
-
-<input type="submit" name="submit">
-
-</form>
-
-	
-<script type='text/javascript'>
-piAId = '957632';
-piCId = '';
-piHostname = 'pdt.peaceworld.click';
-
-(function() {
-	function async_load(){
-		var s = document.createElement('script'); s.type = 'text/javascript';
-		s.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + piHostname + '/pd.js';
-		var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
-	}
-	if(window.attachEvent) { window.attachEvent('onload', async_load); }
-	else { window.addEventListener('load', async_load, false); }
-})();
-</script>
-</body>
+    </body>
 </html>
