@@ -17,6 +17,16 @@
        <!-- submitボタン -->
        <input type="submit" name="送信">
 </form>
+
+	    <button type="button" id="show_banner_button" onClick="pdt('showConsentBanner')">
+        Cookie Consent Settings
+      </button>
+      <button type="button" id="cookie_clear_button" onClick="pdt('clearTrackingCookies')">
+        Cookie Clear
+      </button>
+      <button type="button" id="revokeConsent_button" onClick="pdt('revokeConsent')">
+        revokeConsent
+      </button>
 	<script>
     var piDomain = 'pdt.peaceworld.click'; // format of 'go.example.com'
 
