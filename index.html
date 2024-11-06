@@ -6,6 +6,18 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="description" content="Pardot Website 検証用"/>
         <title>Pardot Website 検証</title>
+
+<script>
+    // URLからutm_sourceのパラメータを取得
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+
+    // utm_sourceを取得してフォームのhiddenフィールドに設定
+    document.getElementById('utm_source2').value = getQueryParam('utm_source2');
+</script>
+	    
     </head>
     <body>
         Hello World
